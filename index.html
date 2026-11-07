@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Gunu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #240b36, #c31464, #ff758c);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hearts span {
+    position: fixed;
+    bottom: -50px;
+    font-size: 22px;
+    animation: float 10s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 0.8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+section {
+    position: relative;
+    z-index: 1;
+    padding: 75px 20px;
+    text-align: center;
+}
+
+h1, h2, .script {
+    font-family: 'Dancing Script', cursive;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 90px);
+    color: #ffe0ec;
+    text-shadow: 0 0 25px #ffb6d5;
+}
+
+.hero p {
+    font-size: 17px;
+    margin: 15px;
+    color: #ffe5ee;
+}
+
+.teddy {
+    font-size: 100px;
+    margin: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% { transform: translateY(-12px); }
+}
+
+button {
+    background: #ff4f87;
+    border: 1px solid #ffc4d8;
+    padding: 15px 30px;
+    border-radius: 40px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    margin: 15px;
+    box-shadow: 0 0 20px #ff8bb5;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff79a4;
+}
+
+.card {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.13);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+    font-size: 45px;
+    color: #ffe0ec;
+    margin-bottom: 20px;
+}
+
+.message {
+    display: none;
+    font-size: 16px;
+    line-height: 2;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.reason {
+    background: rgba(255,255,255,0.15);
+    padding: 22px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.reason:hover {
+    transform: translateY(-7px);
+    background: rgba(255,255,255,0.25);
+}
+
+.reason span {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.final {
+    padding-bottom: 100px;
+}
+
+#finalMessage {
+    display: none;
+    font-size: 25px;
+    color: #ffe0ec;
+    margin-top: 25px;
+    line-height: 1.7;
+    font-family: 'Dancing Script', cursive;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #ffe0ec;
+    position: relative;
+    z-index: 1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="teddy">🧸</div>
+
+    <h1>Hey Gunu ❤️</h1>
+
+    <p>I made something special just for you...</p>
+
+    <button onclick="document.getElementById('apology').scrollIntoView({behavior:'smooth'})">
+        Open your surprise 💌
+    </button>
+
+    <p style="font-size:13px;">
+        A little website, with a lot of love.
+    </p>
+
+</section>
+
+<!-- APOLOGY SECTION -->
+<section id="apology">
+
+    <h2>I'm Really Sorry, Gunu 🥺</h2>
+
+    <div class="card">
+
+        <div style="font-size:55px;">💗</div>
+
+        <p style="margin:15px;">
+            There's something I've been wanting to tell you...
+        </p>
+
+        <button onclick="showApology()">
+            Click here, please ❤️
+        </button>
+
+        <div class="message" id="apologyText">
+
+            <p>
+                Gunu,
+                <br><br>
+
+                I know I've hurt you, and I'm genuinely sorry.
+                I understand that you might be tired of hearing apologies,
+                especially if my actions haven't changed.
+                <br><br>
+
+                You deserve to feel loved, respected, heard and appreciated.
+                I never want you to feel that your feelings don't matter.
+                <br><br>
+
+                I don't expect a button or a few words to fix everything.
+                I want to understand where I've gone wrong and show you
+                through my actions that I'm willing to do better.
+                <br><br>
+
+                You mean so much to me, Gunu.
+                <br><br>
+
+                I'm really, really sorry. ❤️
+            </p>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- REASONS SECTION -->
+<section>
+
+    <h2>10 Reasons Why You're Special 💕</h2>
+
+    <div class="reasons">
+
+        <div class="reason">
+            <span>😊</span>
+            Your smile makes my day brighter.
+        </div>
+
+        <div class="reason">
+            <span>❤️</span>
+            You make my world more beautiful.
+        </div>
+
+        <div class="reason">
+            <span>🫶</span>
+            Your care means everything to me.
+        </div>
+
+        <div class="reason">
+            <span>🌸</span>
+            You're beautiful inside and out.
+        </div>
+
+        <div class="reason">
+            <span>🥰</span>
+            I love the little things about you.
+        </div>
+
+        <div class="reason">
+            <span>✨</span>
+            You make ordinary moments special.
+        </div>
+
+        <div class="reason">
+            <span>💗</span>
+            You mean the world to me.
+        </div>
+
+        <div class="reason">
+            <span>🧸</span>
+            I love being childish with you.
+        </div>
+
+        <div class="reason">
+            <span>🌙</span>
+            You're in my thoughts every day.
+        </div>
+
+        <div class="reason">
+            <span>💍</span>
+            Because you're YOU, Gunu.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FINAL SECTION -->
+<section class="final">
+
+    <h2>One Last Thing, Gunu... 💌</h2>
+
+    <div class="card">
+
+        <div style="font-size:65px;">🐻❤️</div>
+
+        <p>
+            I know things aren't perfect right now.
+            But I still believe in us, and I'm willing to put in
+            the effort to make things better.
+        </p>
+
+        <button onclick="showFinal()">
+            A little more? 🥺
+        </button>
+
+        <div id="finalMessage">
+
+            I love you, Gunu! ❤️
+            <br>
+
+            I'm sorry for hurting you.
+            <br>
+
+            Take your time. I'll respect your feelings.
+            <br><br>
+
+            You deserve all the happiness in the world. 🌷
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    Made with lots of love, just for Gunu ❤️
+
+    <br>
+
+    <span class="script" style="font-size:25px;">
+        Yours, always. 💗
+    </span>
+
+</footer>
+
+<script>
+
+// Floating hearts
+const hearts = document.getElementById("hearts");
+
+const heartSymbols = ["❤️", "💕", "💗", "💖", "🌸", "✨"];
+
+for (let i = 0; i < 25; i++) {
+
+    const heart = document.createElement("span");
+
+    heart.innerHTML =
+        heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (6 + Math.random() * 8) + "s";
+
+    heart.style.animationDelay =
+        Math.random() * 8 + "s";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    hearts.appendChild(heart);
+}
+
+// Reveal apology
+function showApology() {
+
+    const message = document.getElementById("apologyText");
+
+    message.style.display = "block";
+
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+// Reveal final message
+function showFinal() {
+
+    const message = document.getElementById("finalMessage");
+
+    message.style.display = "block";
+
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    // Heart celebration
+    for (let i = 0; i < 15; i++) {
+
+        const heart = document.createElement("span");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.top = "100vh";
+        heart.style.fontSize = "25px";
+        heart.style.zIndex = "10";
+        heart.style.pointerEvents = "none";
+        heart.style.transition =
+            "transform 3s ease, opacity 3s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+
+            heart.style.transform =
+                "translateY(-110vh) rotate(360deg)";
+
+            heart.style.opacity = "0";
+
+        }, 50);
+
+        setTimeout(() => heart.remove(), 3100);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
